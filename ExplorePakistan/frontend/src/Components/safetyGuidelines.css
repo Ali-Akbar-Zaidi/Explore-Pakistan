@@ -1,0 +1,127 @@
+/* Import the base styles */
+@import './userDashBoard.css';
+
+/* Safety guidelines container */
+.safety-guidelines {
+  background-color: #dcfce7;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #86efac;
+  box-shadow: 0 4px 6px rgba(0, 128, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Guidelines container */
+.guidelines-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Guideline category */
+.guideline-category {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid #86efac;
+  box-shadow: 0 2px 4px rgba(0, 128, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.guideline-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 128, 0, 0.08);
+}
+
+/* Guideline heading */
+.guideline-heading {
+  color: #065f46;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #86efac;
+}
+
+/* Guideline list */
+.guideline-list {
+  list-style-position: inside;
+  padding-left: 0.5rem;
+  color: #047857;
+}
+
+.guideline-list li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.25rem;
+  line-height: 1.5;
+}
+
+.guideline-list li:before {
+  content: "•";
+  color: #059669;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Emergency contacts */
+.emergency-contacts {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid #86efac;
+}
+
+/* Contact cards container */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Contact card */
+.contact-card {
+  background-color: #f0fdf4;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #86efac;
+  transition: all 0.2s ease;
+}
+
+.contact-card:hover {
+  background-color: #dcfce7;
+  transform: translateY(-2px);
+}
+
+.contact-card h4 {
+  color: #065f46;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.contact-number {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #059669;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .guidelines-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,277 @@
+/* Fix main container width */
+.main-container {
+  max-width: 100vw; /* Use viewport width to prevent overflow */
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Constrain destinations grid width */
+.destinations-grid {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make destination cards responsive without overflowing */
+.destination-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure content inside cards doesn't cause overflow */
+.card-title, 
+.card-description {
+  word-break: break-word;
+}
+
+/* Adjust the main content area to fit within viewport */
+.main-content {
+  width: 100%;
+  max-width: calc(100vw - 80px); /* Account for sidebar width */
+  padding-right: 20px;
+  box-sizing: border-box;
+  height: auto !important;
+  min-height: 100%;
+  overflow-y: visible !important;
+}
+
+/* Responsive adjustment for cards on smaller screens */
+@media (max-width: 992px) {
+  .destinations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+/* Hidden for sidebar cart count but keep button visible */
+.sidebar-cart-count {
+  display: none !important;
+}
+
+/* CRITICAL HEADER FIX - Force full width and proper positioning */
+.header, 
+header, 
+.app-header, 
+.site-header, 
+.top-header,
+.main-header,
+.navigation-header,
+.page-header,
+nav {
+  width: 100vw !important; /* Force viewport width */
+  max-width: 100vw !important;
+  min-width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  z-index: 100 !important;
+}
+
+/* Ensure inner header containers also take full width */
+.header-inner,
+.header-container,
+.header-content,
+.header-wrapper,
+.nav-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+/* Remove cart from top-right fixed position */
+.cart-container,
+.shopping-cart-container,
+.cart-wrapper,
+.cart-icon-container,
+.header-cart,
+.header-cart-wrapper,
+.cart-button-wrapper {
+  position: relative !important; /* Changed from fixed to relative */
+  top: auto !important; /* Remove top positioning */
+  right: auto !important; /* Remove right positioning */
+  z-index: auto !important;
+  display: inline-flex !important;
+}
+
+/* Target cart button but keep it in the normal header flow */
+.cart-button,
+.shopping-cart-button,
+.cart-icon,
+.shopping-cart-icon,
+button[aria-label*="cart"],
+button[aria-label*="Cart"],
+a[aria-label*="cart"],
+a[aria-label*="Cart"] {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: flex !important;
+  position: relative !important;
+}
+
+/* Ensure SVG icons are visible */
+.cart-button svg,
+.shopping-cart-button svg,
+.cart-icon svg,
+.shopping-cart-icon svg,
+button[aria-label*="cart"] svg,
+button[aria-label*="Cart"] svg {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: block !important;
+}
+
+/* Remove cart count numbering */
+.cart-count,
+.cart-badge,
+.cart-number,
+.cart-items-count,
+.shopping-cart-count,
+.badge,
+span[aria-label*="cart count"],
+span[aria-label*="Cart count"],
+span[class*="cart-count"],
+span[class*="CartCount"],
+span[class*="cart-badge"],
+span[class*="CartBadge"] {
+  display: none !important;
+}
+
+/* Fix for Add to Cart buttons */
+.add-to-cart-button,
+.add-to-cart,
+button[aria-label*="Add to Cart"],
+button[aria-label*="add to cart"],
+a[aria-label*="Add to Cart"],
+a[aria-label*="add to cart"] {
+  position: relative !important;
+  z-index: 999 !important;
+  visibility: visible !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* CRITICAL SCROLL FIX - Ensure vertical scrolling works properly */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto !important; /* Force vertical scrolling */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Ensure content containers can expand properly for scrolling */
+#root,
+#app,
+.app,
+.root,
+.app-container,
+.page-container,
+.site-container,
+.layout-container,
+.main-layout {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100%;
+  height: auto !important;
+}
+
+/* Ensure all content wrappers allow scrolling */
+.content-wrapper,
+.page-wrapper,
+.site-content {
+  height: auto !important;
+  min-height: 100%;
+  overflow-y: visible !important;
+}
+
+/* Prevent overlays from blocking scrolling */
+.overlay,
+.modal-backdrop,
+.popup-overlay {
+  position: absolute;
+  height: auto;
+}
+
+/* Force any fixed headers to take full width but not block scrolling */
+.header.fixed,
+.fixed-header,
+.sticky-header,
+header.fixed,
+header.sticky {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  position: fixed;
+  z-index: 1000;
+  will-change: transform; /* Improves performance */
+}
+
+/* Fix for any elements that might be constraining page height */
+.page,
+.page-content,
+.main,
+main,
+section,
+article,
+.content-area,
+.container {
+  height: auto !important;
+  min-height: initial !important;
+  max-height: none !important;
+  overflow-y: visible !important;
+}
+
+/* Ensure footer doesn't prevent scrolling */
+footer,
+.footer,
+.site-footer,
+.page-footer {
+  position: relative !important;
+  bottom: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  z-index: 99 !important;
+}
+
+/* Fix for any position:fixed elements that might block scrolling */
+.fixed-element,
+[class*="fixed"],
+[class*="sticky"],
+[style*="position: fixed"],
+[style*="position:fixed"] {
+  z-index: 999;
+  pointer-events: auto;
+}
+
+/* Force scrollable areas to be visible and scrollable */
+.scrollable,
+.scroll-container,
+.scroll-area,
+[class*="scroll"],
+[style*="overflow: auto"],
+[style*="overflow:auto"],
+[style*="overflow-y: auto"],
+[style*="overflow-y:auto"] {
+  overflow-y: auto !important;
+  max-height: none !important;
+  height: auto !important;
+}

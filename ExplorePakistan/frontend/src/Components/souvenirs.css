@@ -1,0 +1,421 @@
+/* Souvenirs page specific styles */
+.souvenirs-section {
+    padding: 2rem 0;
+  }
+  
+  /* Search and Filter Bar */
+  .search-filter-container {
+    background-color: #dcfce7;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #86efac;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .search-bar {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    border: 1px solid #86efac;
+  }
+  
+  .search-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #065f46;
+    margin-right: 0.5rem;
+  }
+  
+  .search-input {
+    flex: 1;
+    border: none;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    background: transparent;
+    color: #1f2937;
+  }
+  
+  .search-input:focus {
+    outline: none;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .filter-group label {
+    font-weight: 500;
+    color: #065f46;
+  }
+  
+  .filter-select {
+    background-color: white;
+    border: 1px solid #86efac;
+    border-radius: 0.375rem;
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: #1f2937;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23065f46'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1rem;
+  }
+  
+  /* Souvenirs Grid */
+  .souvenirs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .souvenir-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1px solid #86efac;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .souvenir-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-rating {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(5, 150, 105, 0.9);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  
+  .card-rating span:first-child {
+    color: #fbbf24;
+    margin-right: 0.25rem;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #065f46;
+    margin: 0;
+  }
+  
+  .card-location {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .location-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+    margin-right: 0.25rem;
+  }
+  
+  .card-description {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tag {
+    background-color: #dcfce7;
+    color: #065f46;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .card-finder {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background-color: #f0fdf4;
+    border-radius: 0.375rem;
+    border: 1px solid #dcfce7;
+  }
+  
+  .card-finder h4 {
+    color: #065f46;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .location-info {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #dcfce7;
+  }
+  
+  .card-price {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .price-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+  
+  .price-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #065f46;
+  }
+  
+  .add-to-cart-button {
+    display: flex;
+    align-items: center;
+    background-color: #059669;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #047857;
+  }
+  
+  .add-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+  }
+  
+  /* No results message */
+  .no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    background-color: #dcfce7;
+    border-radius: 0.5rem;
+    color: #065f46;
+  }
+  
+  .reset-button {
+    margin-top: 1rem;
+    background-color: #059669;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .reset-button:hover {
+    background-color: #047857;
+  }
+  
+  /* Base styles that may be needed if not imported from a common file */
+  .main-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f0fdf4;
+  }
+  
+  .sidebar {
+    width: 6rem;
+    background-color: #dcfce7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-right: 1px solid #86efac;
+  }
+  
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .sidebar-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  
+  .sidebar-button.active {
+    background-color: #86efac;
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #065f46;
+  }
+  
+  .label {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #065f46;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #86efac;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #065f46;
+    margin: 0;
+  }
+  
+  .cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .search-filter-container {
+      flex-direction: column;
+    }
+    
+    .search-bar,
+    .filters {
+      width: 100%;
+    }
+    
+    .filters {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .filter-group {
+      width: 100%;
+    }
+    
+    .filter-select {
+      width: 100%;
+    }
+    
+    .souvenirs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .souvenirs-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Ensure the sidebar and content areas are properly sized */
+.sidebar {
+    height: 100%; /* Full height for the sidebar */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.main-content {
+    flex: 1; /* Allow the content area to grow */
+    overflow-y: auto; /* Enable scrolling for the main content */
+    padding: 1rem; /* Add padding for better spacing */
+}
+.souvenirs-container {
+    min-height: 100vh; /* Allow content to grow beyond the viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 2rem;
+    background-color: #f9fafb; /* Light background color */
+}

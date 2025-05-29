@@ -1,0 +1,441 @@
+/* Main container */
+.main-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f0fdf4; /* Light background color */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 6rem;
+  background-color: #bbf7d0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem 0;
+  border-right: 1px solid #86efac;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Navigation items */
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Sidebar button */
+.sidebar-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #bbf7d0;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.75rem 0;
+  text-align: center;
+  border-left: 4px solid transparent;
+  transition: background-color 0.2s, border-left 0.2s;
+}
+
+/* Active button */
+.sidebar-button.active {
+  border-left: 4px solid #059669;
+  background-color: rgba(5, 150, 105, 0.2);
+}
+
+/* Hover effect */
+.sidebar-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main content */
+.main-content {
+  margin-left: 6rem;
+  padding: 2rem;
+  width: calc(100% - 6rem);
+  overflow-y: auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #86efac;
+}
+
+/* Title */
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #065f46;
+}
+
+/* Cart button */
+.cart-button {
+  background-color: #059669;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cart-button:hover {
+  background-color: #047857;
+}
+
+/* History section */
+.history-section {
+  padding: 2rem 0;
+  flex: 1;
+}
+
+/* History box */
+.history-box {
+  background-color: #dcfce7;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #86efac;
+}
+
+/* Section title */
+.section-title {
+  color: #065f46;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* History filter */
+.history-filter {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Filter button */
+.filter-button {
+  background-color: #bbf7d0;
+  color: #065f46;
+  border: 1px solid #86efac;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-button:hover {
+  background-color: #86efac;
+}
+
+.filter-button.active {
+  background-color: #059669;
+  color: white;
+  border-color: #047857;
+}
+
+/* History items */
+.history-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* History card */
+.history-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #86efac;
+  display: flex;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.history-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card image placeholder */
+.card-image-placeholder {
+  width: 30%;
+  background-color: #bbf7d0;
+  position: relative;
+  min-height: 12rem;
+}
+
+/* Image overlay */
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  height: 50%;
+}
+
+/* Card details */
+.card-details {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Trip header */
+.trip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Trip city */
+.trip-city {
+  color: #065f46;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Trip rating */
+.trip-rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star-icon {
+  color: #d1d5db;
+}
+
+.star-icon.filled {
+  color: #fbbf24;
+}
+
+/* Trip info */
+.trip-info {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Info item */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.info-icon {
+  color: #059669;
+}
+
+/* Trip highlights */
+.trip-highlights {
+  margin-bottom: 1rem;
+}
+
+.trip-highlights h4 {
+  color: #065f46;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Highlights list */
+.highlights-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Highlight item */
+.highlight-item {
+  background-color: #dcfce7;
+  color: #059669;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.highlight-icon {
+  color: #059669;
+}
+
+/* Card actions */
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* Details button */
+.details-button {
+  background-color: #059669;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.details-button:hover {
+  background-color: #047857;
+}
+
+/* Favorite button */
+.favorite-button {
+  background-color: #dcfce7;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.favorite-button:hover {
+  background-color: #bbf7d0;
+}
+
+.heart-icon {
+  color: #059669;
+}
+
+/* No history message */
+.no-history-message {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+/* Message content */
+.message-content {
+  background-color: #dcfce7;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  max-width: 30rem;
+  border: 1px solid #86efac;
+}
+
+.message-content h3 {
+  color: #065f46;
+  margin: 1rem 0;
+}
+
+.message-content p {
+  color: #047857;
+  margin-bottom: 1.5rem;
+}
+
+.large-icon {
+  color: #059669;
+}
+
+/* Explore button */
+.explore-button {
+  margin-top: 1rem;
+  background-color: #059669;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.explore-button:hover {
+  background-color: #047857;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .history-card {
+    flex-direction: column;
+  }
+  
+  .card-image-placeholder {
+    width: 100%;
+    height: 10rem;
+  }
+  
+  .trip-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Ensure the sidebar and content areas are properly sized */
+.sidebar {
+  height: 100%; /* Full height for the sidebar */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.main-content {
+  flex: 1; /* Allow the content area to grow */
+  overflow-y: auto; /* Enable scrolling for the main content */
+  padding: 1rem; /* Add padding for better spacing */
+}
+
+/* Added styles for destination boxes in a grid */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 boxes per row */
+  gap: 20px; /* Space between boxes */
+  margin: 20px 0; /* Spacing around the grid */
+}
+
+/* Updated styles for destination boxes to match the green behind "YOUR SAVED TRAVEL PLANS" */
+.destination-box {
+  background-color: #dcfce7; /* Match the green behind "YOUR SAVED TRAVEL PLANS" */
+  color: #065f46; /* Dark green text */
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.destination-box h3 {
+  margin: 0;
+}

@@ -1,0 +1,144 @@
+/* Admin Users styles consistent with adminDashboard.css */
+
+/* Search Bar */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  width: 250px;
+}
+
+.search-icon {
+  color: #64748b;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 0.875rem;
+  color: #1e293b;
+}
+
+/* Full width user list */
+.users-list-container.full-width {
+  height: auto;
+  width: 100%;
+  margin: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* User List Table styling to match bookings table */
+.users-table td, .users-table th {
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.inactive {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.inactive-user {
+  background-color: #f8fafc;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.status-btn {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.status-btn:hover {
+  background-color: #bfdbfe;
+}
+
+.edit-btn {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.edit-btn:hover {
+  background-color: #bfdbfe;
+}
+
+.delete-btn {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background-color: #fecaca;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .search-bar {
+    width: 100%;
+  }
+  
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-wrapper {
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+  
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .users-list-container.full-width {
+    margin: 0 1rem 1rem 1rem;
+  }
+}

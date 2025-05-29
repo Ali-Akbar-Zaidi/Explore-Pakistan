@@ -1,0 +1,147 @@
+/* Import base styles from userDashBoard.css (applied through React import) */
+/* Additional styles specific to Reports */
+@import './userDashBoard.css';
+/* Chart container */
+.chart-container {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  
+  .chart {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #86efac;
+    margin-bottom: 1.5rem;
+  }
+  
+  .chart-description {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #dcfce7;
+    border-radius: 0.5rem;
+    color: #065f46;
+    line-height: 1.6;
+    font-size: 0.9rem;
+  }
+  
+  /* Reports section */
+  .reports-section {
+    margin-bottom: 2rem;
+  }
+  
+  /* History Table */
+  .history-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .travel-history-chart {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #86efac;
+  }
+  
+  .history-table {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #86efac;
+  }
+  
+  .history-table h3 {
+    color: #065f46;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dcfce7;
+  }
+  
+  th {
+    background-color: #bbf7d0;
+    color: #065f46;
+    font-weight: 600;
+  }
+  
+  tr:hover {
+    background-color: rgba(134, 239, 172, 0.1);
+  }
+  
+  /* Tips Section */
+  .tips-section {
+    margin-top: 2rem;
+  }
+  
+  .tips-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .tip-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #86efac;
+  }
+  
+  .tip-header {
+    color: #065f46;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #86efac;
+    padding-bottom: 0.5rem;
+  }
+  
+  .tip-card p {
+    color: #047857;
+    line-height: 1.6;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .tips-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .history-content {
+      flex-direction: column;
+    }
+  }
+  
+  /* Override recharts default tooltip */
+  .recharts-tooltip-wrapper .recharts-default-tooltip {
+    background-color: #dcfce7 !important;
+    border: 1px solid #86efac !important;
+  }
+  
+  .recharts-tooltip-label {
+    color: #065f46 !important;
+  }
+  
+  /* Animation for chart loading */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .chart {
+    animation: fadeIn 0.5s ease-out forwards;
+  }

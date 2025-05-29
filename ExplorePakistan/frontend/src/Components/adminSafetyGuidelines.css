@@ -1,0 +1,460 @@
+/* Import the base styles */
+@import './userDashBoard.css';
+
+/* Main content layout */
+.admin-safety-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Chart container styles */
+.chart-container {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.categories-container {
+  grid-column: span 1;
+}
+
+.contacts-container {
+  grid-column: span 1;
+}
+
+/* Chart header */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.chart-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111827;
+  font-weight: 600;
+}
+
+/* Search bar */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  position: relative;
+  width: 250px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  font-size: 0.875rem;
+  background-color: white;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+}
+
+/* Add category form */
+.add-category-form {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f0fdf4;
+}
+
+.admin-input {
+  flex-grow: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  font-size: 0.875rem;
+}
+
+.admin-input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+}
+
+.admin-button,
+.add-item-button,
+.add-contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-button,
+.add-item-button,
+.add-contact-button {
+  background-color: #10b981;
+  color: white;
+}
+
+.add-button:hover,
+.add-item-button:hover,
+.add-contact-button:hover {
+  background-color: #059669;
+}
+
+.save-all-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-all-button:hover {
+  background-color: #059669;
+}
+
+/* Guidelines accordion */
+.guidelines-accordion {
+  padding: 0;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background-color: #f0fdf4;
+}
+
+.accordion-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #065f46;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.accordion-content {
+  padding: 1rem 1.5rem;
+  background-color: white;
+}
+
+/* Edit category form */
+.edit-category-form {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.save-button {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #2563eb;
+}
+
+.cancel-button {
+  background-color: #6b7280;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #4b5563;
+}
+
+/* Guideline list */
+.guideline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.guideline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.375rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.guideline-item:hover {
+  background-color: #f0fdf4;
+  border-color: #d1fae5;
+}
+
+.item-text {
+  flex-grow: 1;
+  margin-right: 1rem;
+  font-size: 0.9375rem;
+}
+
+/* Item actions */
+.item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sm-btn {
+  padding: 0.125rem;
+}
+
+.edit-btn:hover {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.delete-btn:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.action-icon {
+  color: #6b7280;
+}
+
+.edit-btn:hover .action-icon {
+  color: #2563eb;
+}
+
+.delete-btn:hover .action-icon {
+  color: #dc2626;
+}
+
+/* Add item form */
+.add-item-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.edit-item-form {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+/* Emergency contacts section */
+.contact-cards {
+  padding: 1rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.contact-card:hover {
+  background-color: #f0fdf4;
+  border-color: #d1fae5;
+}
+
+.contact-info {
+  flex-grow: 1;
+}
+
+.contact-info h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #065f46;
+}
+
+.contact-number {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: #374151;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Edit contact form */
+.edit-contact-form {
+  padding: 1rem 1.5rem;
+  background-color: #f0fdf4;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  color: #065f46;
+  font-weight: 500;
+}
+
+/* Confirmation dialog */
+.confirmation-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dialog-content {
+  width: 90%;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-content h3 {
+  margin-top: 0;
+  color: #111827;
+  font-size: 1.25rem;
+}
+
+.item-to-delete {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.item-count, .category-name, .contact-number {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.warning-message {
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  border-radius: 0.5rem;
+  color: #b91c1c;
+  font-size: 0.875rem;
+  margin: 1rem 0;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn, .confirm-delete-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.cancel-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.confirm-delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.confirm-delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive layout adjustments */
+@media (min-width: 1024px) {
+  .admin-safety-content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
